@@ -34,9 +34,9 @@ class QuerySpider(scrapy.Spider):
         yield scrapy.Request(url=url2, callback=self.parse2, cookies={'ASP.NET_SessionId': cookie[1]})
 
     def parse2(self, response):
-        name = response.xpath('//span[@id = "lblxm"]')
-        name = name.xpath('string(.)').extract()[0]
-        print(name)
-        with open("%s_成绩.html" % name, 'w', encoding='GBK') as f:
+      # name = response.xpath('//span[@id = "lblxm"]')
+      #  name = name.xpath('string(.)').extract()[0]
+      #  print(name)
+        with open("/Users/vill/Desktop/成绩.html", 'w', encoding='GBK') as f:
             f.write(response.text)
             f.close()
