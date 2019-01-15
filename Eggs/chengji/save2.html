@@ -1,0 +1,34 @@
+
+
+<html>
+<head>
+    <title>
+        南京财经大学
+    </title>
+    <link href="style/Styles.css" type="text/css" rel="stylesheet">
+    <script language="javascript">
+        (function () {
+            var t = self.frameElement;
+            if (t && (t.tagName == "FRAME" || t.tagName == "IFRAME")) {
+                window.top.location = document.URL;
+            }
+        })();
+        function full() {
+            moveTo(0, 0)
+            resizeTo(window.screen.availWidth, window.screen.availHeight)
+            //resizeTo(800,600)
+        }
+        //full();
+    </script>
+</head>
+<frameset id="upFrame" name="upFrame" rows="60,27,*" cols="*" frameborder="NO" border="0"
+    framespacing="0">
+    <frame name="topFrame" src="topbanner.aspx" scrolling="no" noresize target="contents">
+    <frame name="topFrame1" src="topmenu.aspx" scrolling="no" noresize>
+    <frameset id="centerFrame" name="centerFrame" cols="160,10,*" framespacing="0">
+        <frame name="MenuFrame" src="leftmenu.aspx" scrolling="no" noresize>
+        <frame name="pushRLFrame" src="pushRL.htm" scrolling="no" noresize>
+        <frame name="PageFrame" src="loging.aspx">
+    </frameset>
+</frameset>
+</html>
