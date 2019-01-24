@@ -18,4 +18,4 @@
 不过因为本人使用的系统是OSX所以编写一个shell，只要双击就可以成绩很快地以html的格式放到桌面上，local分支是个人使用的<br>
 shell就长下面这样（对，就是这么简单）<br>
 ![1111](https://raw.githubusercontent.com/villmi/ScrapyServerByPython/master/img/shell-img.png)<br>
-之后我还加入了一个查询课表的爬虫，叫做uery_schedule，使用方法参照上面一个，毕竟好久没有写代码了，写这两个基于Scrapy的爬虫练练手。
+之后我还加入了一个查询课表的爬虫，叫做query_schedule，使用方法参照上面一个，毕竟好久没有写代码了，写这两个基于Scrapy的爬虫练练手。
