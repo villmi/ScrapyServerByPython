@@ -1,22 +1,20 @@
 import socket
-import threading
-
-ip_port = ('127.0.0.1', 2333)
-mySocket = socket.socket()
-mySocket.connect(ip_port)
 
 
-def listenServer(mySocket):
+def sendMsg():
+    print('send.....')
+    mySocket = socket.socket()
+    mySocket.connect(('127.0.0.1', 2333))
     while True:
-        data = mySocket.recv(1024)
-        print("the message is %s" % data)
+        # data = mSocket.recv(1024)
+        # print("Received message:%s" % str(data))
+        inp = input('please input:')
+        mySocket.sendall(inp.encode('utf-8'))
+        print("msg has been sent")
+        if inp == 'over':
+            break
+            mySocket.close()
 
 
-while True:
-    data = mySocket.recv(1024)
-    print("Received message:%s" % str(data))
-    inp = input('please input:')
-    mySocket.sendall(inp.encode('utf-8'))
-    if inp == 'over':
-        break
-mySocket.close()
+if __name__ == '__main__':
+    sendMsg()
