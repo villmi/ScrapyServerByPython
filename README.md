@@ -10,7 +10,7 @@
 通过之前我写的说明可以使用本程序快速爬去研究生系统里的个人的所有已存在的课表以及成绩单并存放在程序根目录里，之前的内容也介绍了用于我个人mac的shell脚本.<br>
 为了方便检查作业以及环境不匹配已经录制了一个视频，如果有时间老师可以观看，感觉效果还行,是基于我自己的电脑的<br>
 具体代码是<a href="https://github.com/villmi/ScrapyServerByPython/tree/demo" target="_blank">demo</a>分支（单纯只是改了文件位置）<br>
-<a href="" target="_blank">我是视频，可以点的</a>
+<a href="http://v.youku.com/v_show/id_XNDA3Njk4NzU5Mg==.html?spm=a2hzp.8244740.0.0" target="_blank">我是视频，可以点的</a>
 
 
 
