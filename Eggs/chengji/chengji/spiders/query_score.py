@@ -15,6 +15,7 @@ class QuerySpider(scrapy.Spider):
     def parse(self, response):
         url = 'http://210.28.80.133:8080/pyxx/login.aspx'
         viewState = response.xpath('/html/body/form/input[@name="__VIEWSTATE"]/@value').extract_first()
+
         yield scrapy.FormRequest(url=url, callback=self.parse1, formdata={'__VIEWSTATE': viewState,
                                                                           '_ctl0:txtusername': response.meta['username'],
                                                                           '_ctl0:ImageButton1.x': '0',

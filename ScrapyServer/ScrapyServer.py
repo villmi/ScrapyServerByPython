@@ -48,7 +48,12 @@ class Server(socketserver.BaseRequestHandler):
                                            'end': 'end'})
                     self.request.sendall(response)
                 else:
-                    
+                    command = './scrapy.sh %s,%s' % (keyword, count)
+
+                    def action(cmd):
+                        a = os.popen(cmd)
+                        a.read()
+                    threading.Thread(target=action, args=command)
                     while not over:
                         time.sleep(1)
                         sql = "select * from spider.query where word='%s'" % keyword

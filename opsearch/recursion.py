@@ -11,7 +11,7 @@ class Solution:
             return False
         if(sindex == len(str1)) and (pindex != len(pindex)):
             if(pindex+1 < len(pattern)) and (pattern[pindex + 1] == '*'):
-                return self.matchCore(str, sindex, pattern, pindex + 2)
+                return self.matchCore(str1, sindex, pattern, pindex + 2)
             else:
                 return False
         if(pindex + 1 < len(pattern)) and (pattern[pindex + 1] == '*'):
