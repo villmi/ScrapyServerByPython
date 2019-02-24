@@ -1,7 +1,7 @@
 def isMatch(str1, pattern):
     if (str1 is None) or (pattern is None):
         return False
-    flag = [(True for i in range(100)) for i in range(100)]
+    flag = [(True for i in range(len(str1))) for i in range(len(pattern))]
 
     m = len(str1) + 1
     n = len(pattern) + 1
@@ -13,8 +13,8 @@ def isMatch(str1, pattern):
         else:
             flag[0][num] = False
 
-    for i in range(1,m):
-        for j in range(1,n):
+    for i in range(1, m):
+        for j in range(1, n):
             if j >= 2 and pattern[j - 1] == '*':
                 if pattern[j - 2] == str1[i - 1] or pattern[j - 2] == '.':
                     flag[i][j] = flag[i][j - 2] or flag[i - 1][j] or flag[i - 1][j - 2]
