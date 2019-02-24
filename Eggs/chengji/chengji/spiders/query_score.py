@@ -37,7 +37,7 @@ class QuerySpider(scrapy.Spider):
         name = response.xpath('//span[@id = "lblxm"]')
         try:
             name = name.xpath('string(.)').extract()[0]
-            with open("%s_成绩.html" % name, 'w', encoding='GBK') as f:
+            with open("/Users/vill/Desktop/%s_成绩.html" % name, 'w', encoding='GBK') as f:
                 f.write(response.text)
                 f.close()
         except:

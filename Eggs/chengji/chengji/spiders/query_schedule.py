@@ -63,6 +63,6 @@ class QuerySpider(scrapy.Spider):
         value = response.meta['value']
         print("3:")
         print(value)
-        with open('课表_%s.html' % value, 'w', encoding='GBK') as f:
+        with open('/Users/vill/Desktop/课表_%s.html' % value, 'w', encoding='GBK') as f:
             f.write(response.text)
             f.close()

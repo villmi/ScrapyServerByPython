@@ -9,6 +9,7 @@ import os
 class Server(socketserver.BaseRequestHandler):
     def handle(self):
         # some object
+        print('new connection')
         response = {}
         i = 1
         over = False# 数据库查询结果是否返回完全
@@ -91,6 +92,11 @@ class Server(socketserver.BaseRequestHandler):
                         else:
                             over = False
 
+
+if __name__ == '__main__':
+    server = socketserver.ThreadingTCPServer(('127.0.0.1', 2333), Server)
+    print('running')
+    server.serve_forever()
 
 
 

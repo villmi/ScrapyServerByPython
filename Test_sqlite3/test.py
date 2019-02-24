@@ -6,7 +6,13 @@ print('open sqlite successfully!')
 
 c = con.cursor()
 
-sql = 'select * from company where id="100"'
+sql = '''CREATE TABLE "query" (id INT PRIMARY KEY NOT NULL,' 
+      word TEXT, 
+      tablename TEXT, 
+      state INT NOT NULL, 
+      completed INT NOT NULL,'
+      total INT NOT NULL
+      );'''
 c.execute(sql)
 print(c.fetchone())
 
